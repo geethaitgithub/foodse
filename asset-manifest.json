@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/foodse/static/css/main.117be893.css",
+    "main.js": "/foodse/static/js/main.b26e3347.js",
+    "static/js/787.10934972.chunk.js": "/foodse/static/js/787.10934972.chunk.js",
+    "static/media/foodselogo.png": "/foodse/static/media/foodselogo.7cbcfd64e08a037c820f.png",
+    "static/media/userlogo.png": "/foodse/static/media/userlogo.178d03ca67101f0d7a78.png",
+    "index.html": "/foodse/index.html",
+    "static/media/filterdata,js": "/foodse/static/media/filterdata,js.d2e243a7d92334b6bce7",
+    "main.117be893.css.map": "/foodse/static/css/main.117be893.css.map",
+    "main.b26e3347.js.map": "/foodse/static/js/main.b26e3347.js.map",
+    "787.10934972.chunk.js.map": "/foodse/static/js/787.10934972.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.117be893.css",
+    "static/js/main.b26e3347.js"
+  ]
+}
