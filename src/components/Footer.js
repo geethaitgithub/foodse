@@ -3,11 +3,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
-        <h4 className="p-2 m-2 font-bold bg-amber-600 shadow-black shadow-lg">
-            This site is developed by Geetha
-        </h4>
-  </div>
+
+   <div className=" w-full h-12 fixed p-2 m-1 bottom-0  bg-amber-600 text-blue-dark text-center leading-[3.5rem]  shadow-black shadow-lg">
+   <span className="text-center p-1 m-2">Made by Hasini Sivakumar partnered with kamal the bom</span>
+ </div>
   )
 }
 

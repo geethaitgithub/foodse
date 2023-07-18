@@ -1,17 +1,14 @@
 import React,{useState,useEffect}  from 'react';
 import RestaurantCard from './RestaurantCard';
-import  filterData from '../utils/filterdata,js';
 import { GET_RESTAURANTS_LIST } from '../contants/config.js'; /* url to get Restaurant data */
 import Shimmer from '../contants/Shimmer.js'
-
+import { filterData } from '../utils/filterData';
 
 const Body = () => {
     const [searchtext,setSearchText] = useState([]);
     const [allRestaurants, setAllRestaurants] = useState([]);
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     const [errorMsg, setErrorMsg] = useState('');
-  
-
     
 
     useEffect(() => {
@@ -36,11 +33,8 @@ const Body = () => {
       };
 
       const searchData = (searchText, restaurants ) => ()=> { 
-        console.log("called search"); 
         if(searchText !== '') {
-          console.log(searchText);
           const data = filterData(searchText,restaurants);
-          console.log(data);
           setFilteredRestaurants(data); 
           setErrorMsg('');
         if (data.length === 0) {
@@ -62,6 +56,7 @@ if (!allRestaurants) {
     
 <div className=" shadow-lg p-2 m-2">
   <div>
+    
     <input
           type="text"
           className="focus:bg-green-200 p-2 m-2 rounded-2xl w-80 border border-gray-300 shadow-lg shadow-black"
@@ -71,14 +66,10 @@ if (!allRestaurants) {
             setSearchText(e.target.value);
           }}
     />
-    <button
-          className=" p-2 m-2 bg-orange-900 hover:bg-gray-500 text-white rounded-2xl shadow-black "
-          onClick={() => {searchData(searchtext, allRestaurants);
-            
-          }}
-        >
-          Search
-    </button>
+<button className="rounded-lg bg-zinc-600 hover shadow-lg p-2 m-1 text-yellow-50" 
+            onClick={ searchData(searchtext, allRestaurants)}> Search </button>
+    
+   
 </div>
 { errorMsg && 
       <div className="h-14 m-auto text-center" id="error">
@@ -86,13 +77,16 @@ if (!allRestaurants) {
       </div> 
     }
 
-
 { allRestaurants?.length === 0 ? (<Shimmer />) :
+
 <div className="flex flex-wrap">
+  
       {filteredRestaurants.map((restaurant) => {
+        
         return <RestaurantCard key={restaurant.data.id} {...restaurant.data} />;
       })}
     </div>
+
 }
 </div>
 
