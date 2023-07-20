@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { toggleUser } from "../utils/appSlice.js";
 import { Link } from "react-router-dom";
 
+
 const Header = () => {
   const isLoggedIn = useSelector((store) => store.app.isLoggedIn);
   const dispatch = useDispatch();
@@ -24,17 +25,17 @@ const Header = () => {
       <div className=" w-4/12">
         <nav className=" ">
           <ul className="nav-items flex   font-bold justify-between">
-            <li className=" p-1 m-2 bg-cyan-600  shadow-lg shadow-cyan-500/50 rounded-lg">
+            <li className=" p-1 m-2 shadow-lg rounded-lg">
               <Link to="/foodse"> HOME </Link>
             </li>
-            <li className=" p-1 m-2 bg-cyan-600 shadow-lg shadow-cyan-500/50 rounded-lg">
+            <li className=" p-1 m-2 shadow-lg rounded-lg">
               <Link to="about">ABOUT</Link>
             </li>
            
-            <li className=" p-1 m-2 bg-cyan-600 shadow-lg shadow-cyan-500/50 rounded-lg">
+            <li className=" p-1 m-2 shadow-lg rounded-lg">
               <Link to="spiderman">CONTACT</Link>
             </li>
-            <li className=" p-1 m-2 bg-cyan-600 shadow-lg shadow-cyan-500/50 rounded-lg">
+            <li className=" p-1 m-2 shadow-lg  rounded-lg">
               <Link to="cart">
                 <img className="h-8" alt="cartlogo" src={cartIcon} />
               </Link>

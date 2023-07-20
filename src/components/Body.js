@@ -3,6 +3,7 @@ import RestaurantCard from './RestaurantCard';
 import { GET_RESTAURANTS_LIST } from '../contants/config.js'; /* url to get Restaurant data */
 import Shimmer from '../contants/Shimmer.js'
 import { filterData } from '../utils/filterData';
+import { Link } from 'react-router-dom';
 
 const Body = () => {
     const [searchtext,setSearchText] = useState([]);
@@ -21,9 +22,11 @@ const Body = () => {
           /* Live Data */
           const response = await fetch(GET_RESTAURANTS_LIST);
           const restaurantList = await response.json();
-          
-          
-    
+          //console.log(restaurantList?.data?.cards[2]?.data?.data?.cards);
+          console.log(GET_RESTAURANTS_LIST);
+          console.log(restaurantList);
+          console.log(restaurantList?.data?.cards[2]?.data?.data?.totalRestaurants);
+
           setAllRestaurants(restaurantList?.data?.cards[2]?.data?.data?.cards);
           setFilteredRestaurants(restaurantList?.data?.cards[2]?.data?.data?.cards);
         } catch (error) {
@@ -59,6 +62,8 @@ if (!allRestaurants) {
     
     <input
           type="text"
+          id = "searchInput"
+          name = "searchInput"
           className="focus:bg-green-200 p-2 m-2 rounded-2xl w-80 border border-gray-300 shadow-lg shadow-black"
           placeholder="Search here"
           value={searchtext}
@@ -83,11 +88,16 @@ if (!allRestaurants) {
   
       {filteredRestaurants.map((restaurant) => {
         
-        return <RestaurantCard key={restaurant.data.id} {...restaurant.data} />;
+        return (
+          <Link 
+          to ={"/menu/" + restaurant.data.id} key={restaurant.data.id}>
+            <RestaurantCard key={restaurant.data.id} {...restaurant.data} />
+          </Link>
+      );
       })}
     </div>
 
-}
+} 
 </div>
 
   )
