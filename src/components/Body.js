@@ -23,12 +23,13 @@ const Body = () => {
           const response = await fetch(GET_RESTAURANTS_LIST);
           const restaurantList = await response.json();
           //console.log(restaurantList?.data?.cards[2]?.data?.data?.cards);
-          console.log(GET_RESTAURANTS_LIST);
-          console.log(restaurantList);
-          console.log(restaurantList?.data?.cards[2]?.data?.data?.totalRestaurants);
-
-          setAllRestaurants(restaurantList?.data?.cards[2]?.data?.data?.cards);
-          setFilteredRestaurants(restaurantList?.data?.cards[2]?.data?.data?.cards);
+          //console.log(GET_RESTAURANTS_LIST);
+          //console.log(restaurantList?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+          //console.log(restaurantList?.data?.cards[2]?.card?.card?.totalRestaurants);
+          setAllRestaurants(restaurantList?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+          setFilteredRestaurants(restaurantList?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+          //setAllRestaurants(restaurantList?.data?.cards[2]?.data?.data?.cards);
+          //setFilteredRestaurants(restaurantList?.data?.cards[2]?.data?.data?.cards);
         } catch (error) {
           console.log(error);
         }
@@ -89,10 +90,11 @@ if (!allRestaurants) {
       {filteredRestaurants.map((restaurant) => {
         
         return (
+          
           <Link 
-          to ={"/menu/" + restaurant.data.id} key={restaurant.data.id}>
-            <RestaurantCard key={restaurant.data.id} {...restaurant.data} />
-          </Link>
+          to ={"/menu/" + restaurant.info.id} key={restaurant.info.id}>
+            <RestaurantCard key={restaurant.info.id} {...restaurant.info} />
+        </Link>
       );
       })}
     </div>

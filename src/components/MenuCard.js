@@ -3,7 +3,7 @@ import { ITEM_IMG_CDN } from '../contants/config';
 import MealItemInput from './MealItemInput';
 
 const MenuCard = ({item}) => {
-    console.log(item.description+"menu");
+    //console.log(item.description+"menu");
   return (
    
    <div className="flex ">
@@ -26,7 +26,7 @@ const MenuCard = ({item}) => {
         </p>
         </div>
     </div></div>
-     <MealItemInput  menuItem={item}/>
+     <MealItemInput key={item.id} menuItem={item}/>
 
      </div>
   )

@@ -45,7 +45,7 @@ const RestaurantMenu = () => {
              console.log(menuItems);
              
         setMenuRestaurant(menuItems);
-        console.log(MenuRestaurant);
+       
          };
       
         
@@ -87,7 +87,7 @@ const RestaurantMenu = () => {
         {/*<hr className=" w-full h-1 mx-auto my-4 bg-slate-500 border-0 rounded md:my-4 dark:bg-gray-700" />*/}
         <div className=''>
        
-        {console.log(MenuRestaurant)}
+        
       
           {MenuRestaurant?.map((menu) => (<ShowContent menu={menu} />))}
       </div></div>
