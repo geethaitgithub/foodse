@@ -22,10 +22,10 @@ const Body = () => {
           /* Live Data */
           const response = await fetch(GET_RESTAURANTS_LIST);
           const restaurantList = await response.json();
-          //console.log(restaurantList?.data?.cards[2]?.data?.data?.cards);
+          //console.log(restaurantList?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
           //console.log(GET_RESTAURANTS_LIST);
           
-          setAllRestaurants(restaurantList?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+          setAllRestaurants(restaurantList?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);//.
           setFilteredRestaurants(restaurantList?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
           //setAllRestaurants(restaurantList?.data?.cards[2]?.data?.data?.cards);
           //setFilteredRestaurants(restaurantList?.data?.cards[2]?.data?.data?.cards);
@@ -57,25 +57,24 @@ if (!allRestaurants) {
 
   return (
     
-<div className=" shadow-lg p-2 m-2">
-  <div>
-    
+<div>
+  <div className=' px-10 mt-12 justify-center'>
     <input
           type="text"
           id = "searchInput"
           name = "searchInput"
-          className="focus:bg-green-200 p-2 m-2 rounded-2xl w-80 border border-gray-300 shadow-lg shadow-black"
-          placeholder="Search here"
+          className=" py-2 my-2 rounded-l-2xl border border-yellow-600 shadow-lg w-2/5"
+          placeholder="Search for restaurant"
           value={searchtext}
           onChange={(e) => {
             setSearchText(e.target.value);
           }}
     />
-<button className="rounded-lg bg-zinc-600 hover shadow-lg p-2 m-1 text-yellow-50" 
+<button className="rounded-r-lg bg-yellow-600  hover shadow-lg p-2 my-2 text-black " 
             onClick={ searchData(searchtext, allRestaurants)}> Search </button>
     
    
-</div>
+    </div>
 { errorMsg && 
       <div className="h-14 m-auto text-center" id="error">
         <span className="error-text w-14 h-8 " id="error-msg">{errorMsg}</span>
@@ -87,13 +86,14 @@ if (!allRestaurants) {
 <div className="flex flex-wrap">
   
       {filteredRestaurants.map((restaurant) => {
-        
+        console.log("test"+restaurant);
         return (
-          
+           
           <Link 
           to ={"/menu/" + restaurant.info.id} key={restaurant.info.id}>
             <RestaurantCard key={restaurant.info.id} {...restaurant.info} />
         </Link>
+        
       );
       })}
     </div>
@@ -105,3 +105,4 @@ if (!allRestaurants) {
 }
 
 export default Body
+

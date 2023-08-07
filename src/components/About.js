@@ -1,28 +1,26 @@
 import React from "react";
-import logo from "../Images/foodselogo.png";
-import { Link } from "react-router-dom";
+import food from "../Images/onlinefoodorder.png";
 
 const About = () => {
   return (
-    <div className=" bg-slate-300p-3 m-2">
-      <div className="about-section">
-        <h1 className=" font-bold ">About Us Page</h1>
+    <div className=" bg-slate-300p-3 m-5 p-5 flex">
+        <div className="about-left text-lg font-serif font-semibold">
         <p>We provde quality food on time.</p>
-       
-      </div>
-
-      <h2 className="text-align:center font-bold">Our Team</h2>
-      <div className="card">
-        <img className=" w-40" src={logo} alt="foodse"></img>
-        <div className="container">
-         
-          <p>
-            <Link to="/foodse"><button className="button">HOME</button></Link>
-          </p>
+        <br/>
+          <h1>
+            Welcome to <br/> The World Of <br/>
+            <span>Tasty & Fresh Food</span>
+          </h1>
+          <h4>
+            "Better you will feel if you eat a <span>FOODSE</span> healthy
+            meal"
+          </h4>
+        </div>
+        <div className="about-right">
+          <img src={food} alt="foodorder"></img>
         </div>
       </div>
       
-    </div>
   );
 };
 
