@@ -24,8 +24,7 @@ const Body = () => {
           const restaurantList = await response.json();
           //console.log(restaurantList?.data?.cards[2]?.data?.data?.cards);
           //console.log(GET_RESTAURANTS_LIST);
-          //console.log(restaurantList?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-          //console.log(restaurantList?.data?.cards[2]?.card?.card?.totalRestaurants);
+          
           setAllRestaurants(restaurantList?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
           setFilteredRestaurants(restaurantList?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
           //setAllRestaurants(restaurantList?.data?.cards[2]?.data?.data?.cards);
