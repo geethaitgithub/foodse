@@ -1,6 +1,23 @@
 Demo here
 https://regal-cupcake-551f13.netlify.app/
 
+I am thrilled to share that the project foodapp website is now live built from scratch, responsive, UI friendly using Swiggy API .
+Incorporated numerous functionalities, handling the Swiggy API posed challenges, solved issue of CORS while fetching, added Shimmer UI and more functionalities.
+
+🛠️ Power-Packed Tools, features & Packages used behind:
+
+
+⚛️ React: The Backbone of Our UI:
+🎣 Hooks & customHooks:
+✅ Custom Shimmer:
+🌍 React Router DOM: Navigating with Ease:
+💅 Tailwind CSS: Styling Made Simple:
+🔀 Code Splitting or Lazy Loading: On-Demand Loading:
+- Accessing users location
+- Created Error page
+🔄 Redux: Managing State Like a Pro:
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
