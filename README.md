@@ -17,6 +17,22 @@ Incorporated numerous functionalities, handling the Swiggy API posed challenges,
 - Created Error page
 🔄 Redux: Managing State Like a Pro:
 
+Key Features
+◉ Multi Select Cuisines Based Restaurant Filter.
+◉ Search Based Restaurants Filter.
+◉ Top Restaurants Filter.
+◉ React Slick Slider & React Toastify Library.
+◉ Shimmer UI
+◉ CORS Extension For Fetching Swiggy Live API Data from Swiggy Public APIs.
+◉ Tailwind CSS & Bootstrap 5.
+◉ Functional & Class Based Components.
+◉ React Router DOM for routing & navigation
+◉ Redux ,Redux ToolKit
+◉ Accordion From Scratch
+◉ Lazy Loading
+◉ Context API
+◉ Lifting The State Up
+◉ React Testing Library
 
 # Getting Started with Create React App
 
