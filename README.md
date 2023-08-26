@@ -1,5 +1,5 @@
 Demo here
-https://regal-cupcake-551f13.netlify.app/
+https://foodse-reactapp.netlify.app/
 
 I am thrilled to share that the project foodapp website is now live built from scratch, responsive, UI friendly using Swiggy API .
 Incorporated numerous functionalities, handling the Swiggy API posed challenges, solved issue of CORS while fetching, added Shimmer UI and more functionalities.
